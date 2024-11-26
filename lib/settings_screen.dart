@@ -24,25 +24,6 @@ class SettingsScreen extends StatelessWidget {
               value: themeProvider.isDarkTheme,
               onChanged: (value) => themeProvider.toggleTheme(),
             ),
-            const SizedBox(height: 20),
-            const Text(
-              'Favorite Color:',
-              style: TextStyle(fontSize: 18),
-            ),
-            Wrap(
-              spacing: 20,
-              children: Colors.primaries.map((color) {
-                return GestureDetector(
-                  onTap: () => themeProvider.setFavoriteColor(color),
-                  child: CircleAvatar(
-                    backgroundColor: color,
-                    child: themeProvider.favoriteColor == color
-                        ? const Icon(Icons.check, color: Colors.white)
-                        : null,
-                  ),
-                );
-              }).toList(),
-            ),
             const Spacer(),
             ElevatedButton(
               onPressed: () => Navigator.push(

@@ -28,19 +28,6 @@ class ProfileScreen extends StatelessWidget {
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 10),
-            Row(
-              children: [
-                const Text(
-                  'Favorite Color:',
-                  style: TextStyle(fontSize: 18),
-                ),
-                const SizedBox(width: 10),
-                CircleAvatar(
-                  backgroundColor: themeProvider.favoriteColor,
-                  radius: 15,
-                ),
-              ],
-            ),
             const Spacer(),
             ElevatedButton(
               onPressed: () => Navigator.pop(context),
